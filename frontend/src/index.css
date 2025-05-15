@@ -1,0 +1,258 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 10;
+  color:green;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  border: #333;
+}
+
+/* Título principal */
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color:#333;
+  margin: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Título de la lista de tareas */
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contenedor de la lista de tareas */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-color: #333;
+  border: 1px solid black; 
+}
+
+/* Cada tarea */
+li {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black; 
+}
+
+/* Información de la tarea */
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-info h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.task-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Estilos de completado */
+.task-info .completed {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.task-info .incomplete {
+  font-weight: bold;
+  color: #f44336;
+}
+
+/* Contenedor de botones */
+.task-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Botones */
+button {
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 45%;
+  min-width: 100px;
+  text-align: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Botón Eliminar */
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+/* Botón Editar */
+button.edit {
+  background-color: #2196F3;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #1976D2;
+}
+
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 15px auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  border: 1px solid black; 
+}
+
+
+/* Título de Agregar Tarea */
+form h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+ 
+   border: 2px solid red;
+  background-color: yellow;
+}
+
+/* Etiquetas y campos de entrada */
+form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Botón de Enviar */
+form button[type='submit'] {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+form button[type='submit']:hover {
+  background-color: #1976D2;
+}
+
+/* Botón Volver */
+form .back-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+form .back-button:hover {
+  background-color: #d32f2f;
+}
+
+form .back-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+form .back-button:hover {
+  background-color: #333;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.header button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  min-width: 170px; 
+  padding: 10px 20px; 
+  font-size: 18px; 
+  border-radius: 6px;
+}
+
+.form-title {
+  
+  text-align: center;
+  color: green;
+  
+}
