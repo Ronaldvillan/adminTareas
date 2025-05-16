@@ -25,3 +25,18 @@ Uso
 Probar la aplicación en el navegador y verificar que se comunique correctamente con el backend.
 Confirmar que listar, crear y editar tareas funcione bien.
 Imagenes del funcionamiento de la app para una mejor comprensión:
+
+
+imagenes del funcionamiento de la app
+
+🏠 Página principal  
+![Página principal](frontend/src/assets/paginaPrincipal.PNG)
+
+➕ Crear nueva tarea  
+![Formulario de creación](frontend/src/assets/formularioCrearNuevaTarea.PNG)
+
+✏️ Tarea editada  
+![Tarea editada](frontend/src/assets/tarjetaEditada.PNG)
+
+🗑️ Tarea eliminada  
+![Tarea eliminada](frontend/src/assets/tarjetaEliminada.PNG)
