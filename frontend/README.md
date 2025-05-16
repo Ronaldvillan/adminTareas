@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+- Ejecutar:
+  git clone https://github.com/Ronaldvillan/adminTareas.git
+  cd adminTareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Configurar variables de entorno
 
-Currently, two official plugins are available:
+   - Backend: crear archivo .env en backend/ con:
+     PORT=5000
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+     - Asegurarse que el puerto 5000 esté libre.
+     - Si cambia el puerto, actualizar también la URL en frontend/.env.
 
-## Expanding the ESLint configuration
+   - Frontend: crear archivo .env en frontend/ con:
+     VITE_API_URL=http://localhost:5000/api
+     - Cambiar el puerto en esta URL si el backend corre en otro.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. Instalar dependencias
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   - Backend:
+     cd backend
+     npm install
+     npm install dotenv # importante para variables de entorno
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   - Frontend:
+     cd ../frontend
+     npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Levantar el proyecto
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   - Backend (desde backend/):
+     node server.js
+
+     - Debería mostrar: Servidor corriendo en el puerto 5000
+
+   - Frontend (desde frontend/):
+     npm run dev
+     - Abrir la URL que muestra la terminal (normalmente http://localhost:5173/)
+
+5. Uso
+   - Probar la aplicación en el navegador y verificar que se comunique correctamente con el backend.
+   - Confirmar que listar, crear y editar tareas funcione bien.
+
+Notas importantes:
+
+- Verificar que el puerto 5000 esté libre o cambiarlo en backend/.env y frontend/.env simultáneamente.
+- El backend necesita la dependencia 'dotenv', por eso se debe instalar explícitamente.
+- Siempre arrancar primero el backend para que el frontend pueda comunicarse correctamente.
+- En caso de dudas o errores, revisar que las variables de entorno estén bien configuradas.
+
+---
+
+📸 Capturas de la aplicación
+
+A continuación se presentan imágenes del funcionamiento de la app para una mejor comprensión:
+
+🏠 Página principal
+![Página principal](./frontend/src/assets/paginaPrincipal.PNG)
+
+➕ Crear nueva tarea
+![Formulario de creación](./frontend/src/assets/formularioCrearNuevaTarea.PNG)
+
+✏️ Tarea editada
+![Tarea editada](./frontend/src/assets/tarjetaEditada.PNG)
+
+🗑️ Tarea eliminada
+![Tarea eliminada](./frontend/src/assets/tarjetaEliminada.PNG)
