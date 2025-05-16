@@ -40,27 +40,18 @@
    - Probar la aplicación en el navegador y verificar que se comunique correctamente con el backend.
    - Confirmar que listar, crear y editar tareas funcione bien.
 
-Notas importantes:
 
-- Verificar que el puerto 5000 esté libre o cambiarlo en backend/.env y frontend/.env simultáneamente.
-- El backend necesita la dependencia 'dotenv', por eso se debe instalar explícitamente.
-- Siempre arrancar primero el backend para que el frontend pueda comunicarse correctamente.
-- En caso de dudas o errores, revisar que las variables de entorno estén bien configuradas.
 
----
+Imagenes del funcionamiento de la app para una mejor comprensión:
 
-📸 Capturas de la aplicación
+🏠 Página principal  
+![Página principal](src/assets/paginaPrincipal.PNG)
 
-A continuación se presentan imágenes del funcionamiento de la app para una mejor comprensión:
+➕ Crear nueva tarea  
+![Formulario de creación](src/assets/formularioCrearNuevaTarea.PNG)
 
-🏠 Página principal
-![Página principal](./frontend/src/assets/paginaPrincipal.PNG)
+✏️ Tarea editada  
+![Tarea editada](src/assets/tarjetaEditada.PNG)
 
-➕ Crear nueva tarea
-![Formulario de creación](./frontend/src/assets/formularioCrearNuevaTarea.PNG)
-
-✏️ Tarea editada
-![Tarea editada](./frontend/src/assets/tarjetaEditada.PNG)
-
-🗑️ Tarea eliminada
-![Tarea eliminada](./frontend/src/assets/tarjetaEliminada.PNG)
+🗑️ Tarea eliminada  
+![Tarea eliminada](src/assets/tarjetaEliminada.PNG)
